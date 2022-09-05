@@ -45,6 +45,11 @@ namespace ClassRoomNet60
 			this.MyBirthmonth = myBirthMonth;
 			MyBirthday = myBirthday;
 			//MyBirthday = myBirthday;
-		}	
+		}
+
+		public override string ToString()
+		{
+			return $"{nameof(StudentName)}: { StudentName}, { nameof(MyBirthmonth)}: { MyBirthmonth}, { nameof(MyBirthday)}: { MyBirthday}";
+		}
 	}
 }

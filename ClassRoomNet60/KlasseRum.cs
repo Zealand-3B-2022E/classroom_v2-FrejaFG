@@ -58,5 +58,19 @@ namespace ClassRoomNet60
 			}
 			return $"{nameof(klasseNavn)}: {Klassenavn}\n\n{nameof(studerende)}:\n{studerende}\n{nameof(SemesterStart)}: {SemesterStart}";
 		}
+
+		public void WhichSeason()
+		{
+			var resultliste = this.studerende.GroupBy(x => x.Season()).Select(aarstidGroup => new
+			{
+				aarstid = aarstidGroup.Key,
+				countAarstid = aarstidGroup.Count()
+			});
+
+			foreach(var item in resultliste)
+			{
+				Console.WriteLine($"Season: {item.aarstid} Count: {item.countAarstid}");
+			}
+		}
 	}
 }

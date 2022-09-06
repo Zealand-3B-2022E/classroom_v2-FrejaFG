@@ -47,9 +47,35 @@ namespace ClassRoomNet60
 			//MyBirthday = myBirthday;
 		}
 
+		public string Season()
+		{
+			switch (MyBirthmonth)
+			{
+				case 12:
+				case 1:
+				case 2:
+					return "Winter";
+
+				case 3:
+				case 4:
+				case 5:
+					return "spring";
+				case 6:
+				case 7:
+				case 8:
+					return "summer";
+				case 9:
+				case 10:
+				case 11:
+					return "Autumn";
+				default:
+					return $"The month no {MyBirthmonth} are not in the interval 1-12";
+			}
+		}
+
 		public override string ToString()
 		{
-			return $"{nameof(StudentName)}: { StudentName}, { nameof(MyBirthmonth)}: { MyBirthmonth}, { nameof(MyBirthday)}: { MyBirthday}";
+			return $"{nameof(StudentName)}: { StudentName}, { nameof(MyBirthmonth)}: { MyBirthmonth}, { nameof(MyBirthday)}: { MyBirthday}, Season: {Season}";
 		}
 	}
 }

@@ -17,3 +17,5 @@ studerendeListe.Add(S3);
 KlasseRum K1 = new KlasseRum("B3", studerendeListe, new DateOnly(2022,09,01));
 
 Console.WriteLine(K1);
+
+
